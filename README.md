@@ -84,6 +84,11 @@ Each service is containerized using Docker, and communication is managed within 
    - **Frontend App Two**: [http://localhost:3001](http://localhost:3001)
    - **Auth Server**: [http://localhost:8080](http://localhost:8080)
 
+4. Login
+   You can using credential in seeder auth-server.
+   Example : Nurdiansyah (nurdiansyah)
+
+
 ---
 
 ## Environment Variables

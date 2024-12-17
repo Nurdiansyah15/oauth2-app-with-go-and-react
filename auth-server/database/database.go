@@ -3,7 +3,6 @@ package database
 import (
 	"auth-server/models"
 	"fmt"
-	"log"
 	"os"
 
 	"gorm.io/driver/postgres"
@@ -21,24 +20,6 @@ func InitDB() error {
 	}
 
 	DB = db
-
-	log.Println("Clearing existing data...")
-
-	if err := DB.Exec("DELETE FROM users").Error; err != nil {
-		log.Fatalf("Failed to clear users table: %v", err)
-	}
-
-	if err = DB.Exec("DELETE FROM clients").Error; err != nil {
-		log.Fatalf("Failed to clear clients table: %v", err)
-	}
-
-	if err = DB.Exec("DELETE FROM auth_codes").Error; err != nil {
-		log.Fatalf("Failed to clear auth_codes table: %v", err)
-	}
-
-	if err = DB.Exec("DELETE FROM sessions").Error; err != nil {
-		log.Fatalf("Failed to clear sessions table: %v", err)
-	}
 
 	return DB.AutoMigrate(&models.User{}, &models.Client{}, &models.AuthCode{}, &models.Session{})
 }

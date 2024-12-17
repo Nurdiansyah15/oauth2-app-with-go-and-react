@@ -28,8 +28,8 @@ func main() {
 		panic("Failed to connect to database: " + err.Error())
 	}
 
-	seeders.ClientSeeder()
-	seeders.UserSeeder()
+	seeders.Seeder()
+
 
 	r := gin.Default()
 

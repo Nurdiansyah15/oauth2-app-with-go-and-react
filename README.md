@@ -66,28 +66,33 @@ Each service is containerized using Docker, and communication is managed within 
 
 - Install [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/).
 
-### Steps to Run
+Here is the corrected version of your instructions:
 
-1. Clone the repository:
+
+
+### Steps to Run the Application
+
+1. **Clone the Repository:**
    ```bash
    git clone https://github.com/Nurdiansyah15/oauth2-app-with-go-and-react.git
    cd oauth2-app-with-go-and-react
    ```
 
-2. Build and start all containers:
+2. **Build and Start All Containers:**
    ```bash
    docker-compose up --build
    ```
 
-3. Access the applications:
-   - **Frontend App One**: [http://localhost:3000](http://localhost:3000)
-   - **Frontend App Two**: [http://localhost:3001](http://localhost:3001)
-   - **Auth Server**: [http://localhost:8080](http://localhost:8080)
+3. **Access the Applications:**
+   - **Frontend App One:** [http://localhost:3000](http://localhost:3000)
+   - **Frontend App Two:** [http://localhost:3001](http://localhost:3001)
+   - **Auth Server:** [http://localhost:8080](http://localhost:8080)
 
-4. Login
-   You can using credential in seeder auth-server.
-   Example : Nurdiansyah (nurdiansyah)
-
+4. **Login:**
+   - You can use the credentials from the `auth-server` seeder.
+   - Example: 
+     - **Username:** Nurdiansyah
+     - **Password:** nurdiansyah
 
 ---
 

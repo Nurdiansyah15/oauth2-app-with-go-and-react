@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  # PostgreSQL container
+  postgres:
+    image: postgres:16
+    container_name: postgres-container
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: oauth_db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+
+  # Auth server container
+  auth-server:
+    build:
+      context: ./auth-server
+    container_name: auth-server-container
+    environment:
+      - DB_HOST=postgres-container
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASS=postgres
+      - DB_NAME=oauth_db
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+  # Frontend App One container
+  frontend-app-one:
+    build:
+      context: ./app-one/frontend
+    container_name: frontend-app-one-container
+    ports:
+      - "3000:80"
+    networks:
+      - app-network
+    depends_on:
+      - backend-app-one
+
+  # Backend App One container
+  backend-app-one:
+    build:
+      context: ./app-one/backend
+    container_name: backend-app-one-container
+    ports:
+      - "8081:8081"
+    networks:
+      - app-network
+
+  # Frontend App Two container
+  frontend-app-two:
+    build:
+      context: ./app-two/frontend
+    container_name: frontend-app-two-container
+    ports:
+      - "3001:80"
+    networks:
+      - app-network
+    depends_on:
+      - backend-app-two
+
+  # Backend App Two container
+  backend-app-two:
+    build:
+      context: ./app-two/backend
+    container_name: backend-app-two-container
+    ports:
+      - "8082:8082"
+    networks:
+      - app-network
+
+# Volumes for persistent data
+volumes:
+  postgres-data:
+
+# Define networks
+networks:
+  app-network:
+    driver: bridge

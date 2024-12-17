@@ -1,0 +1,25 @@
+# Mengabaikan node_modules yang tidak diperlukan di dalam Docker image
+node_modules
+
+# Mengabaikan file log
+*.log
+
+# Mengabaikan build lokal (folder build yang dihasilkan dari perintah npm run build)
+build
+
+# Mengabaikan file sistem macOS
+.DS_Store
+
+# Mengabaikan file sistem Windows
+Thumbs.db
+
+# Mengabaikan file konfigurasi IDE seperti VSCode, JetBrains, dll.
+.vscode
+.idea
+
+# Mengabaikan file environment yang tidak diperlukan
+.env
+
+# Mengabaikan file dan direktori lainnya yang tidak diperlukan
+*.tgz
+npm-debug.log*

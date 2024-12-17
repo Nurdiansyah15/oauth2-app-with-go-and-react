@@ -1,0 +1,124 @@
+.app-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* loginm page */
+
+.login-page {
+  margin-top: 100px;
+}
+
+.title {
+  font-size: 36px;
+  color: #333;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* dashboard */
+/* General Styling */
+.dashboard {
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-content {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  color: #333;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #007bff;
+  color: white;
+}
+
+.navbar-title {
+  font-size: 24px;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-button:hover {
+  background-color: #004085;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  width: 150px;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #333;
+  text-align: left;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f8f9fa;
+}
